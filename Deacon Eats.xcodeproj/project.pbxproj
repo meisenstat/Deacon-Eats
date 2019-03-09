@@ -16,6 +16,7 @@
 		30B378F9221B731600D1AC2C /* Deacon_EatsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B378F8221B731600D1AC2C /* Deacon_EatsUITests.swift */; };
 		30E29D8A222744DC003EA657 /* NewOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E29D89222744DC003EA657 /* NewOrderViewController.swift */; };
 		30E29D8C22274644003EA657 /* GeneralTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E29D8B22274644003EA657 /* GeneralTabBarViewController.swift */; };
+		E86E6AD4222C7D4B00D00CC8 /* PlaceOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86E6AD3222C7D4B00D00CC8 /* PlaceOrderViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		30B378FA221B731600D1AC2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		30E29D89222744DC003EA657 /* NewOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewOrderViewController.swift; sourceTree = "<group>"; };
 		30E29D8B22274644003EA657 /* GeneralTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralTabBarViewController.swift; sourceTree = "<group>"; };
+		E86E6AD3222C7D4B00D00CC8 /* PlaceOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceOrderViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				30B378D8221B731500D1AC2C /* AppDelegate.swift */,
 				30B378DA221B731500D1AC2C /* ViewController.swift */,
 				30B378DC221B731500D1AC2C /* Main.storyboard */,
+				E86E6AD3222C7D4B00D00CC8 /* PlaceOrderViewController.swift */,
 				30E29D89222744DC003EA657 /* NewOrderViewController.swift */,
 				30E29D8B22274644003EA657 /* GeneralTabBarViewController.swift */,
 				30B378DF221B731600D1AC2C /* Assets.xcassets */,
@@ -262,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E86E6AD4222C7D4B00D00CC8 /* PlaceOrderViewController.swift in Sources */,
 				30E29D8A222744DC003EA657 /* NewOrderViewController.swift in Sources */,
 				30B378DB221B731500D1AC2C /* ViewController.swift in Sources */,
 				30B378D9221B731500D1AC2C /* AppDelegate.swift in Sources */,
