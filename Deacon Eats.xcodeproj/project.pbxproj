@@ -11,10 +11,10 @@
 		30B378DB221B731500D1AC2C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B378DA221B731500D1AC2C /* ViewController.swift */; };
 		30B378DE221B731500D1AC2C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30B378DC221B731500D1AC2C /* Main.storyboard */; };
 		30B378E0221B731600D1AC2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30B378DF221B731600D1AC2C /* Assets.xcassets */; };
-		30B378E3221B731600D1AC2C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30B378E1221B731600D1AC2C /* LaunchScreen.storyboard */; };
 		30B378EE221B731600D1AC2C /* Deacon_EatsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B378ED221B731600D1AC2C /* Deacon_EatsTests.swift */; };
 		30B378F9221B731600D1AC2C /* Deacon_EatsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B378F8221B731600D1AC2C /* Deacon_EatsUITests.swift */; };
 		91336F952227495C0080D0C8 /* Remove_ListingTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91336F942227495C0080D0C8 /* Remove_ListingTableView.swift */; };
+		91CE9800223F4A510098878F /* setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CE97FF223F4A510098878F /* setup.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +40,6 @@
 		30B378DA221B731500D1AC2C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		30B378DD221B731500D1AC2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		30B378DF221B731600D1AC2C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		30B378E2221B731600D1AC2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		30B378E4221B731600D1AC2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		30B378E9221B731600D1AC2C /* Deacon EatsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Deacon EatsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		30B378ED221B731600D1AC2C /* Deacon_EatsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deacon_EatsTests.swift; sourceTree = "<group>"; };
@@ -49,6 +48,7 @@
 		30B378F8221B731600D1AC2C /* Deacon_EatsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deacon_EatsUITests.swift; sourceTree = "<group>"; };
 		30B378FA221B731600D1AC2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91336F942227495C0080D0C8 /* Remove_ListingTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Remove_ListingTableView.swift; sourceTree = "<group>"; };
+		91CE97FF223F4A510098878F /* setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = setup.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,9 +102,9 @@
 				30B378D8221B731500D1AC2C /* AppDelegate.swift */,
 				30B378DA221B731500D1AC2C /* ViewController.swift */,
 				30B378DC221B731500D1AC2C /* Main.storyboard */,
+				91CE97FF223F4A510098878F /* setup.swift */,
 				91336F942227495C0080D0C8 /* Remove_ListingTableView.swift */,
 				30B378DF221B731600D1AC2C /* Assets.xcassets */,
-				30B378E1221B731600D1AC2C /* LaunchScreen.storyboard */,
 				30B378E4221B731600D1AC2C /* Info.plist */,
 			);
 			path = "Deacon Eats";
@@ -237,7 +237,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30B378E3221B731600D1AC2C /* LaunchScreen.storyboard in Resources */,
 				30B378E0221B731600D1AC2C /* Assets.xcassets in Resources */,
 				30B378DE221B731500D1AC2C /* Main.storyboard in Resources */,
 			);
@@ -267,6 +266,7 @@
 				30B378DB221B731500D1AC2C /* ViewController.swift in Sources */,
 				91336F952227495C0080D0C8 /* Remove_ListingTableView.swift in Sources */,
 				30B378D9221B731500D1AC2C /* AppDelegate.swift in Sources */,
+				91CE9800223F4A510098878F /* setup.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,14 +308,6 @@
 				30B378DD221B731500D1AC2C /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		30B378E1221B731600D1AC2C /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				30B378E2221B731600D1AC2C /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
