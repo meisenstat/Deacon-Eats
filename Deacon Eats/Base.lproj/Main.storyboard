@@ -129,6 +129,7 @@
                         <outlet property="destinationButton" destination="KVh-8x-JbZ" id="8GY-ii-Uep"/>
                         <outlet property="navigationBar" destination="cAI-zY-gk9" id="5Mu-EW-ldg"/>
                         <outlet property="otherButton" destination="K9Z-gq-0Zk" id="HSc-Fd-OGF"/>
+                        <outlet property="submitButton" destination="reD-yf-iVm" id="Udi-H1-3Ij"/>
                         <outlet property="timeLimitButton" destination="bdh-dg-9Ei" id="d7B-Oq-4he"/>
                     </connections>
                 </viewController>
