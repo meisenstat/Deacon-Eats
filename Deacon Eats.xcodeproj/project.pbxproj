@@ -14,6 +14,8 @@
 		30B378E3221B731600D1AC2C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30B378E1221B731600D1AC2C /* LaunchScreen.storyboard */; };
 		30B378EE221B731600D1AC2C /* Deacon_EatsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B378ED221B731600D1AC2C /* Deacon_EatsTests.swift */; };
 		30B378F9221B731600D1AC2C /* Deacon_EatsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B378F8221B731600D1AC2C /* Deacon_EatsUITests.swift */; };
+		7163DEB5223F08DD00845360 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7163DEB4223F08DD00845360 /* CustomCell.swift */; };
+		71796B7F222747800001F971 /* ListingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71796B7E222747800001F971 /* ListingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		30B378F4221B731600D1AC2C /* Deacon EatsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Deacon EatsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		30B378F8221B731600D1AC2C /* Deacon_EatsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deacon_EatsUITests.swift; sourceTree = "<group>"; };
 		30B378FA221B731600D1AC2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7163DEB4223F08DD00845360 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		71796B7E222747800001F971 /* ListingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,8 @@
 				30B378D8221B731500D1AC2C /* AppDelegate.swift */,
 				30B378DA221B731500D1AC2C /* ViewController.swift */,
 				30B378DC221B731500D1AC2C /* Main.storyboard */,
+				71796B7E222747800001F971 /* ListingsViewController.swift */,
+				7163DEB4223F08DD00845360 /* CustomCell.swift */,
 				30B378DF221B731600D1AC2C /* Assets.xcassets */,
 				30B378E1221B731600D1AC2C /* LaunchScreen.storyboard */,
 				30B378E4221B731600D1AC2C /* Info.plist */,
@@ -258,6 +264,8 @@
 			files = (
 				30B378DB221B731500D1AC2C /* ViewController.swift in Sources */,
 				30B378D9221B731500D1AC2C /* AppDelegate.swift in Sources */,
+				7163DEB5223F08DD00845360 /* CustomCell.swift in Sources */,
+				71796B7F222747800001F971 /* ListingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
