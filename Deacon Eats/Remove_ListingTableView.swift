@@ -12,22 +12,14 @@ import UIKit
 
 
 class Remove_ListingTableView: UITableViewController {
-    
-    var button = UIButton()
+    @IBOutlet var button: UIButton!
     var listings = ["data", "from", "database"]
     var selected = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
-    
-        button = UIButton(frame: CGRect(x: 300, y: 100, width: 100, height: 50))
-        button.backgroundColor = .blue
-        button.setTitle("Pick-Up", for: .normal)
-        //button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        
-        
-        self.view.addSubview(button)
+
         
         self.tableView.rowHeight = 50
         self.tableView.tableFooterView = UIView()
@@ -50,6 +42,8 @@ class Remove_ListingTableView: UITableViewController {
         }
         return self.listings.count
     }
+    
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "locationCell", for: indexPath)
         cell.textLabel?.text = self.listings[indexPath.row]
@@ -59,6 +53,12 @@ class Remove_ListingTableView: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("row: " + String(indexPath.row))
+        selected = listings[indexPath.row]
+        
+        self.performSegue(withIdentifier: "pickUpScreen", sender: self)
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "pickUpScreen") {
