@@ -29,8 +29,8 @@ class Remove_ListingTableView: UITableViewController {
         self.view.addSubview(button)
         
         self.tableView.rowHeight = 50
-        //self.tableView.tableFooterView = UIView()
-        //self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
+        self.tableView.tableFooterView = UIView()
+        self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         
     }
     
@@ -56,6 +56,15 @@ class Remove_ListingTableView: UITableViewController {
             cell.backgroundColor = UIColor(red: 231/255, green: 231/255, blue: 231/255, alpha: 1.0)
         }
         return cell
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "pickUpScreen") {
+            print("sel: " + select)
+            let newVC = segue.destination as! PickUpView
+            newVC.listings = select
+        }
     }
 
    /* @objc func buttonAction(sender: UIButton!) {
