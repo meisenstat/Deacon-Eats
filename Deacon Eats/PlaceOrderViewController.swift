@@ -14,7 +14,6 @@ class PlaceOrderViewController: UIViewController, UIPickerViewDelegate, UIPicker
     @IBOutlet weak var destinationButton: UIButton!
     @IBOutlet weak var timeLimitButton: UIButton!
     @IBOutlet weak var otherButton: UIButton!
-    @IBOutlet weak var navigationBar: UINavigationBar!
     @IBOutlet weak var submitButton: UIButton!
     
     var destinations = ["Luter", "Babcock", "Johnson", "Bostwick", "South", "Angeleau", "Collins", "Kitchen", "Poteat", "Davis", "Taylor", "Piccolo", "Palmer", "Huffman", "Efrid", "Dogwood", "Magnolia", "Polo", "Martin", "NCA"]
@@ -74,7 +73,7 @@ class PlaceOrderViewController: UIViewController, UIPickerViewDelegate, UIPicker
     
     func setupGeneral() {
         // set title
-        navigationBar.topItem?.title = restaurant
+        self.navigationItem.title = restaurant
         
         // setup button locations
         destinationButton.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.left
