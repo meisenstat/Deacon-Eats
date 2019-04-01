@@ -12,7 +12,7 @@ import UIKit
 
 
 class Remove_ListingTableView: UITableViewController {
-    @IBOutlet var button: UIButton!
+    
     var listings = ["data", "from", "database"]
     var selected = ""
     override func viewDidLoad() {
@@ -64,7 +64,7 @@ class Remove_ListingTableView: UITableViewController {
         if(segue.identifier == "pickUpScreen") {
             print("sel: " + selected)
             let newVC = segue.destination as! PickUpView
-            newVC.listings = [selected]
+            newVC.selected = selected
         }
     }
 

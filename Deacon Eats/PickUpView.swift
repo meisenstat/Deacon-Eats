@@ -12,21 +12,43 @@ import UIKit
 
 class PickUpView: UIViewController {
      @IBOutlet var pickUpButton: UIButton!
-    var listings = ["data", "from", "database"]
+     @IBOutlet weak var label: UILabel?
+    var selected = ""
+    
+    
+    
+  
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        
         pickUpButton = UIButton(frame: CGRect(x:100, y: 500, width: 100, height: 50))
         pickUpButton.center = self.view.center
         pickUpButton.backgroundColor = .blue
         pickUpButton.setTitle("Pick-Up", for: .normal)
-        
+        pickUpButton.addTarget(self, action: #selector(displayInfo(sender:)), for: .touchUpInside)
+       
         self.view.addSubview(pickUpButton)
+    
+        let label: UILabel = UILabel()
+        label.frame = CGRect(x: 50, y: 50, width: 250, height: 50)
+        label.textColor = UIColor.black
+        label.textAlignment = NSTextAlignment.left
+        label.text = selected
+        self.view.addSubview(label)
+        
+       
         
         
         
        
+    }
+    
+    @IBAction func displayInfo (sender: UIButton!) {
+        print("button clicked")
+        
     }
     
     
