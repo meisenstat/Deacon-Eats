@@ -11,11 +11,17 @@ import Foundation
 import UIKit
 
 class PickUpView: UIViewController {
+     @IBOutlet var pickUpButton: UIButton!
+    var listings = ["data", "from", "database"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        var listings = ["data", "from", "database"]
+        pickUpButton = UIButton(frame: CGRect(x: 300, y: 100, width: 100, height: 50))
+        pickUpButton.backgroundColor = .blue
+        pickUpButton.setTitle("Pick-Up", for: .normal)
         
+        self.view.addSubview(pickUpButton)
 }
     
     
