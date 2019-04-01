@@ -77,6 +77,8 @@ class ListingsViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.isNavigationBarHidden = true
+        self.tabBarController?.tabBar.isHidden = false
         
         let orderOne = listing(userName: "Bob", pickUp: "Moes", dropOff: "Dogwood", expireTime: "12:30:08")
         let orderTwo = listing(userName: "Alice", pickUp: "Subway", dropOff: "Babcock", expireTime: "12:30:08")
