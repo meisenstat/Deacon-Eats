@@ -1,0 +1,41 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Table customers \{\
+  cust_id int [primary key]\
+  status varchar\
+  created_at varchar\
+\}\
+\
+Table runners \{\
+  run_id int [primary key]\
+  status varchar\
+  created_at varchar\
+\}\
+\
+Table listings \{\
+  list_id int [primary key, not null]\
+  item_name varchar\
+  runner_id int [not null]\
+  customer_id int [not null]\
+  final_time int\
+  start_time int\
+\
+\}\
+\
+Table profile \{\
+  id int [primary key]\
+  full_name varchar\
+  contact varchar [unique]\
+\}\
+\
+\
+Ref: customers.cust_id > profile.id\
+Ref: runners.run_id > profile.id \
+Ref: customers.cust_id > listings.list_id\
+Ref: runners.run_id > listings.list_id\
+}
