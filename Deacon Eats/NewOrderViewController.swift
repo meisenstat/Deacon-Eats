@@ -11,7 +11,6 @@ import UIKit
 
 class NewOrderViewController: UITableViewController {
     
-    @IBOutlet var navBar: UINavigationItem!
     var locations = ["Chic-fil-a", "Subway", "Zicks", "Einsteins", "Legal Grounds", "Campus Grounds", "Shorty's", "Starbucks ZSR", "Starbucks North Campus", "Forest Greens", "Moes", "Asian Fusion"]
     var selected = ""
     
@@ -32,7 +31,7 @@ class NewOrderViewController: UITableViewController {
         navBarLabel.textColor = UIColor.black
         navBarLabel.text = "Deacon Eats"
         navBarLabel.font = UIFont.boldSystemFont(ofSize: navBarLabel.font.pointSize)
-        self.navBar.leftBarButtonItem = UIBarButtonItem.init(customView: navBarLabel)
+        self.navigationItem.title = "Deacon Eats"
     }
     
     func addOptionsButton() {
@@ -69,6 +68,7 @@ class NewOrderViewController: UITableViewController {
         if(segue.identifier == "moveToOrder") {
             print("sel: " + selected)
             let newVC = segue.destination as! PlaceOrderViewController
+            newVC.hidesBottomBarWhenPushed = true
             newVC.restaurant = selected
         }
     }
