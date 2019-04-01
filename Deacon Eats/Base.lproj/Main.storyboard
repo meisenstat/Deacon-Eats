@@ -36,7 +36,7 @@
         <!--PickUpView-->
         <scene sceneID="iNa-PH-OlW">
             <objects>
-                <viewController title="PickUpView" id="2eX-Qa-J67" sceneMemberID="viewController">
+                <viewController title="PickUpView" id="2eX-Qa-J67" customClass="PickUpView" customModule="Deacon_Eats" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ine-eC-zu5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
