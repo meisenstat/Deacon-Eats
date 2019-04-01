@@ -14,6 +14,7 @@
 		30B378EE221B731600D1AC2C /* Deacon_EatsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B378ED221B731600D1AC2C /* Deacon_EatsTests.swift */; };
 		30B378F9221B731600D1AC2C /* Deacon_EatsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B378F8221B731600D1AC2C /* Deacon_EatsUITests.swift */; };
 		91336F952227495C0080D0C8 /* Remove_ListingTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91336F942227495C0080D0C8 /* Remove_ListingTableView.swift */; };
+		915A4E672252A63800D7EF52 /* PickUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915A4E662252A63800D7EF52 /* PickUpView.swift */; };
 		91CE9800223F4A510098878F /* setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CE97FF223F4A510098878F /* setup.swift */; };
 		91CE9802223F522F0098878F /* buttonremove.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CE9801223F522F0098878F /* buttonremove.swift */; };
 /* End PBXBuildFile section */
@@ -49,6 +50,7 @@
 		30B378F8221B731600D1AC2C /* Deacon_EatsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deacon_EatsUITests.swift; sourceTree = "<group>"; };
 		30B378FA221B731600D1AC2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91336F942227495C0080D0C8 /* Remove_ListingTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Remove_ListingTableView.swift; sourceTree = "<group>"; };
+		915A4E662252A63800D7EF52 /* PickUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickUpView.swift; sourceTree = "<group>"; };
 		91CE97FF223F4A510098878F /* setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = setup.swift; sourceTree = "<group>"; };
 		91CE9801223F522F0098878F /* buttonremove.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = buttonremove.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -101,6 +103,7 @@
 		30B378D7221B731500D1AC2C /* Deacon Eats */ = {
 			isa = PBXGroup;
 			children = (
+				915A4E662252A63800D7EF52 /* PickUpView.swift */,
 				30B378D8221B731500D1AC2C /* AppDelegate.swift */,
 				30B378DA221B731500D1AC2C /* ViewController.swift */,
 				30B378DC221B731500D1AC2C /* Main.storyboard */,
@@ -270,6 +273,7 @@
 				91336F952227495C0080D0C8 /* Remove_ListingTableView.swift in Sources */,
 				30B378D9221B731500D1AC2C /* AppDelegate.swift in Sources */,
 				91CE9800223F4A510098878F /* setup.swift in Sources */,
+				915A4E672252A63800D7EF52 /* PickUpView.swift in Sources */,
 				91CE9802223F522F0098878F /* buttonremove.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
