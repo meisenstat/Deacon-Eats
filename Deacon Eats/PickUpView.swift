@@ -48,9 +48,13 @@ class PickUpView: UIViewController {
     
     @IBAction func displayInfo (sender: UIButton!) {
         print("button clicked")
-        
+      // send info to database
+        sleep(1)
+        let storyBoad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let nextViewController = storyBoad.instantiateViewController(withIdentifier: "MainListingsPage") as! Remove_ListingTableView
+        self.present(nextViewController, animated: true, completion: nil)
     }
-    
+   
     
 }
     
