@@ -15,16 +15,16 @@
             <objects>
                 <tableViewController storyboardIdentifier="MainListingsPage" id="tdc-t1-QvT" customClass="Remove_ListingTableView" customModule="Deacon_Eats" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="wnF-Vr-V9q" customClass="Remove_ListingTableView">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="separatorColor" cocoaTouchSystemColor="darkTextColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="locationCell" id="PO9-j7-APT">
-                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PO9-j7-APT" id="lta-hW-Q2n">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -36,27 +36,27 @@
                         </connections>
                     </tableView>
                     <connections>
-                        <segue destination="2eX-Qa-J67" kind="show" identifier="pickUpScreen" id="eKL-ca-nan"/>
+                        <segue destination="2eX-Qa-J67" kind="show" identifier="pickUpScreenOld" id="eKL-ca-nan"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iWZ-2Y-7bo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2038" y="3"/>
+            <point key="canvasLocation" x="6130" y="-2169"/>
         </scene>
         <!--PickUpView-->
         <scene sceneID="iNa-PH-OlW">
             <objects>
                 <viewController title="PickUpView" id="2eX-Qa-J67" customClass="PickUpView" customModule="Deacon_Eats" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ine-eC-zu5">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="GmY-8h-lir"/>
-                  </view>
+                    </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0bA-Bu-w0H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1132" y="3"/>
+            <point key="canvasLocation" x="6130" y="-1405"/>
         </scene>
         <!--listingCell-->
         <scene sceneID="Mzv-Vq-bAC">
@@ -69,7 +69,7 @@
         <!--Listings View Controller-->
         <scene sceneID="mkw-bp-8fI">
             <objects>
-                <tableViewController id="owh-Bf-csa" customClass="ListingsViewController" customModule="Deacon_Eats" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ListingsPage" id="owh-Bf-csa" customClass="ListingsViewController" customModule="Deacon_Eats" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="oy1-zN-DeL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -90,6 +90,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="12T-IU-5rT"/>
+                    <connections>
+                        <segue destination="2eX-Qa-J67" kind="show" identifier="pickUpScreen" id="awK-dn-1D5"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XBS-BE-K3q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -732,7 +735,7 @@
         <!--Item-->
         <scene sceneID="hpa-tb-Bxo">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="90V-55-pv4" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="ListingsPageNav" automaticallyAdjustsScrollViewInsets="NO" id="90V-55-pv4" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="5Jk-qo-t9M"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oKO-70-1VQ">
@@ -752,5 +755,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="fJB-a9-JFE"/>
         <segue reference="f4q-YM-foG"/>
+        <segue reference="awK-dn-1D5"/>
     </inferredMetricsTieBreakers>
 </document>
