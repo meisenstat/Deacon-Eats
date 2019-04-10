@@ -464,7 +464,7 @@
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="Q91-Xd-Kgr" appends="YES" id="str-3S-iwE"/>
                         </connections>
-                      </view>
+                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="neP-e2-6Sl"/>
                     <navigationItem key="navigationItem" id="kKg-ZF-xoQ"/>
                 </viewController>
