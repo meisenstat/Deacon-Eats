@@ -50,11 +50,13 @@ class PickUpView: UIViewController {
         print("button clicked")
       // send info to database
        
-       
-        sleep(1)
+//       uncomment once connect database to ensure data is loaded properly
+//       sleep(1)
+        
         let storyBoad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let nextViewController = storyBoad.instantiateViewController(withIdentifier: "MainListingsPage") as! Remove_ListingTableView
-        self.present(nextViewController, animated: true, completion: nil)
+        let nextViewController = storyBoad.instantiateViewController(withIdentifier: "ListingsPage") as! ListingsViewController
+        self.navigationController?.pushViewController(nextViewController, animated: true)
+//        self.present(nextViewController, animated: true, completion: nil)
     }
    
     
