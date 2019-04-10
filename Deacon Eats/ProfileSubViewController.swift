@@ -12,9 +12,15 @@ import UIKit
 class ProfileSubViewController: UIViewController {
     
     override func viewDidLoad() {
-        super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = false
         self.tabBarController?.tabBar.isHidden = true
+        super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = false
+        self.tabBarController?.tabBar.isHidden = true
+        super.viewWillAppear(animated)
     }
     
 }
