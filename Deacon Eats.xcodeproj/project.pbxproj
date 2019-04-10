@@ -14,6 +14,8 @@
 		30B378E3221B731600D1AC2C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30B378E1221B731600D1AC2C /* LaunchScreen.storyboard */; };
 		30B378EE221B731600D1AC2C /* Deacon_EatsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B378ED221B731600D1AC2C /* Deacon_EatsTests.swift */; };
 		30B378F9221B731600D1AC2C /* Deacon_EatsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B378F8221B731600D1AC2C /* Deacon_EatsUITests.swift */; };
+		91336F952227495C0080D0C8 /* Remove_ListingTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91336F942227495C0080D0C8 /* Remove_ListingTableView.swift */; };
+		915A4E672252A63800D7EF52 /* PickUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915A4E662252A63800D7EF52 /* PickUpView.swift */; };
 		7163DEB5223F08DD00845360 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7163DEB4223F08DD00845360 /* CustomCell.swift */; };
 		71796B7F222747800001F971 /* ListingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71796B7E222747800001F971 /* ListingsViewController.swift */; };
 		30E29D8A222744DC003EA657 /* NewOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E29D89222744DC003EA657 /* NewOrderViewController.swift */; };
@@ -54,6 +56,8 @@
 		30B378F4221B731600D1AC2C /* Deacon EatsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Deacon EatsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		30B378F8221B731600D1AC2C /* Deacon_EatsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deacon_EatsUITests.swift; sourceTree = "<group>"; };
 		30B378FA221B731600D1AC2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91336F942227495C0080D0C8 /* Remove_ListingTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Remove_ListingTableView.swift; sourceTree = "<group>"; };
+		915A4E662252A63800D7EF52 /* PickUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickUpView.swift; sourceTree = "<group>"; };
 		7163DEB4223F08DD00845360 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		71796B7E222747800001F971 /* ListingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingsViewController.swift; sourceTree = "<group>"; };
 		30E29D89222744DC003EA657 /* NewOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewOrderViewController.swift; sourceTree = "<group>"; };
@@ -111,9 +115,11 @@
 		30B378D7221B731500D1AC2C /* Deacon Eats */ = {
 			isa = PBXGroup;
 			children = (
+				915A4E662252A63800D7EF52 /* PickUpView.swift */,
 				30B378D8221B731500D1AC2C /* AppDelegate.swift */,
 				30B378DA221B731500D1AC2C /* ViewController.swift */,
 				30B378DC221B731500D1AC2C /* Main.storyboard */,
+				91336F942227495C0080D0C8 /* Remove_ListingTableView.swift */,
 				71796B7E222747800001F971 /* ListingsViewController.swift */,
 				7163DEB4223F08DD00845360 /* CustomCell.swift */,
 				E8FFB028224C151100B948EE /* ProfileSubViewController.swift */,
@@ -214,6 +220,11 @@
 				TargetAttributes = {
 					30B378D4221B731500D1AC2C = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 0;
+							};
+						};
 					};
 					30B378E8221B731600D1AC2C = {
 						CreatedOnToolsVersion = 10.1;
@@ -277,6 +288,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91336F952227495C0080D0C8 /* Remove_ListingTableView.swift in Sources */,
+				915A4E672252A63800D7EF52 /* PickUpView.swift in Sources */,
 				E8256E47224C13020009E07A /* ProfileViewController.swift in Sources */,
 				E86E6AD4222C7D4B00D00CC8 /* PlaceOrderViewController.swift in Sources */,
 				30E29D8A222744DC003EA657 /* NewOrderViewController.swift in Sources */,
