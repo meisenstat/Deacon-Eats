@@ -51,12 +51,15 @@ class Remove_ListingTableView: UITableViewController {
         
         listOfListings = [orderOne, orderTwo, orderThree, orderFour, orderFive, orderSix, orderSeven]
         
+        
+        
 
         
         self.tableView.rowHeight = 50
         self.tableView.tableFooterView = UIView()
         self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         
+    
     }
     
     
