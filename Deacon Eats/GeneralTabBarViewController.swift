@@ -23,7 +23,6 @@ class GeneralTabBarViewController: UITabBarController {
         self.tabBar.items![1].title = "New Order"
         self.tabBar.items![2].title = "Profile"
         
-//        self.tabBar.items![0].image = .Favorites
     }
     
 }
