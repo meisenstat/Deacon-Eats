@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import FirebaseDatabase
 
 class PlaceOrderViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextViewDelegate {
 
@@ -15,6 +16,8 @@ class PlaceOrderViewController: UIViewController, UIPickerViewDelegate, UIPicker
     @IBOutlet weak var timeLimitButton: UIButton!
     @IBOutlet weak var otherButton: UIButton!
     @IBOutlet weak var submitButton: UIButton!
+    
+    var ref: DatabaseReference!
     
     var destinations = ["Luter", "Babcock", "Johnson", "Bostwick", "South", "Angeleau", "Collins", "Kitchen", "Poteat", "Davis", "Taylor", "Piccolo", "Palmer", "Huffman", "Efrid", "Dogwood", "Magnolia", "Polo", "Martin", "NCA"]
     var timeOptions = [[0, 1, 2, 3, 4, 5, 6], [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55]]
@@ -99,7 +102,7 @@ class PlaceOrderViewController: UIViewController, UIPickerViewDelegate, UIPicker
         otherView = UIView(frame: CGRect(x: 0, y: otherButton.frame.maxY + 20, width: view.frame.width, height: 300))
         otherView.isHidden = true
         
-        
+        submitButton.addTarget(self, action: #selector(submitOrder), for: .touchUpInside)
     }
     
     func setupDestinations() {
@@ -175,6 +178,71 @@ class PlaceOrderViewController: UIViewController, UIPickerViewDelegate, UIPicker
         toolbar.setItems([doneButton], animated: false)
         toolbar.isUserInteractionEnabled = true
         otherView.addSubview(toolbar)
+    }
+    
+    @objc func submitOrder() {
+        let profileName = "Bob"
+        var createdTimeFormatted = 0
+        var expireTime = 0
+        
+        // FORMAT START TIME
+        let DateUTC = Date()
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyyMMddHHmm"
+        formatter.timeZone = TimeZone(identifier: "EDT")
+        
+        createdTimeFormatted = Int(formatter.string(from: DateUTC)) as! Int
+        
+        // FORMAT EXPIRE TIME
+        expireTime = (selectedTime[0] * 60) + selectedTime[1]
+        
+        //
+        
+        var orderDetails: NSDictionary = ["active": true, "created": createdTimeFormatted, "eatername": profileName, "expire": expireTime, "location": restaurant, "destination": selectedDestination, "runnername": "N/A", "instructions": otherInstructions]
+        
+        
+//        ----------------- WRITE LISTING -----------------
+        ref = Database.database().reference()
+        var listingID = "LST"
+        
+        // Using this to handle async firebase call
+        let group = DispatchGroup()
+        group.enter()
+        
+        ref.child("listings").observeSingleEvent(of: .value, with: { (snapshot) in
+            // Get user value
+            let value = snapshot.value as? NSDictionary
+            let keys = (value!.allKeys as! [String]).sorted()
+            
+            // Get last listing id + 1 to use as new listing id
+            let lastID = keys[value!.allKeys.count-1] as! String
+            var num = (Int(lastID.suffix(4)) as! Int) + 1
+            
+            // Format appropriately
+            if(num < 10){
+                listingID += "000" + String(num)
+            } else if(num < 100) {
+                listingID += "00" + String(num)
+            } else if(num < 1000) {
+                listingID += "0" + String(num)
+            } else {
+                listingID += String(num)
+            }
+            group.leave()
+            
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+        
+        // Once firebase returns data for most recent id, send new order with next id
+        group.notify(queue: DispatchQueue.main, execute: {
+            self.ref.child("listings").child(listingID).setValue(orderDetails)
+        })
+        
+        // Go back to previous view
+        self.navigationController?.popToRootViewController(animated: true)
+        
     }
     
     @objc func otherClicked(sender: UIButton) {
@@ -280,7 +348,3 @@ class PlaceOrderViewController: UIViewController, UIPickerViewDelegate, UIPicker
 
     
 }
-
-//private extension Selector {
-//    static let keyboardWillShow = #selector(PlaceOrderViewController.keyboardWillShow(notification:))
-//}

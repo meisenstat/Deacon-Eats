@@ -9,20 +9,20 @@
 import Foundation
 
 import UIKit
+import FirebaseDatabase
 
 class PickUpView: UIViewController {
      @IBOutlet var pickUpButton: UIButton!
      @IBOutlet weak var label: UILabel?
     var selected = ""
+    var listingID = ""
     
-    
-    
-  
-    
+    var ref: DatabaseReference!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print("id: " + listingID)
         
         pickUpButton = UIButton(frame: CGRect(x:100, y: 500, width: 100, height: 50))
         pickUpButton.center = self.view.center
@@ -50,13 +50,19 @@ class PickUpView: UIViewController {
         print("button clicked")
       // send info to database
        
-//       uncomment once connect database to ensure data is loaded properly
-//       sleep(1)
+        ref = Database.database().reference()
+        ref.child("listings").child(listingID).child("active").setValue(false) {
+            (error:Error?, ref:DatabaseReference) in
+            if let error = error {
+                print("Data could not be saved: \(error).")
+            } else {
+                print("Data saved successfully!")
+                let storyBoad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let nextViewController = storyBoad.instantiateViewController(withIdentifier: "ListingsPage") as! ListingsViewController
+                self.navigationController?.pushViewController(nextViewController, animated: true)
+            }
+        }
         
-        let storyBoad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let nextViewController = storyBoad.instantiateViewController(withIdentifier: "ListingsPage") as! ListingsViewController
-        self.navigationController?.pushViewController(nextViewController, animated: true)
-//        self.present(nextViewController, animated: true, completion: nil)
     }
    
     
