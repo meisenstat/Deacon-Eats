@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import FirebaseDatabase
 
 //struct CellData{
 //    let userName : String?
@@ -41,26 +42,31 @@ class listing {
 
 class ListingsViewController: UITableViewController {
     
+    var ref: DatabaseReference!
     var listOfListings : [listing] = []
+    var listingIDs: [String] = []
     var selected = ""
+    var selectedID = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = true
         self.tabBarController?.tabBar.isHidden = false
         
-        let orderOne = listing(userName: "Bob", pickUp: "Moes", dropOff: "Dogwood", expireTime: "12:30:08")
-        let orderTwo = listing(userName: "Alice", pickUp: "Subway", dropOff: "Babcock", expireTime: "12:30:08")
-        let orderThree = listing(userName: "Phil", pickUp: "Zicks", dropOff: "Kitchin", expireTime: "12:30:08")
-        let orderFour = listing(userName: "Laurie", pickUp: "CFA", dropOff: "Taylor", expireTime: "12:30:08")
-        let orderFive = listing(userName: "Jack", pickUp: "CFA", dropOff: "ZSR", expireTime: "12:30:08")
-        let orderSix = listing(userName: "Alex", pickUp: "VillJui", dropOff: "Benson", expireTime: "12:30:08")
-        let orderSeven = listing(userName: "Sally", pickUp: "ForGree", dropOff: "South", expireTime: "12:30:08")
         
-         listOfListings = [orderOne, orderTwo, orderThree, orderFour, orderFive, orderSix, orderSeven]
+        getFirebaseData()
         
         let headerView: UIView = UIView.init(frame: CGRect(x:1, y:50, width:276, height:44))
         headerView.backgroundColor = UIColor(red: 235/255.0, green: 235/255.0, blue: 235/255.0, alpha: 1.0)
+        
+        let reloadButton = UIButton()
+        reloadButton.frame = CGRect(x: 0, y: 0, width: 70, height: 44)
+        let img = UIImage(named: "reloadImage")
+//        img.tint
+        reloadButton.setImage(img, for: .normal)
+        reloadButton.tintColor = UIColor.blue
+        reloadButton.addTarget(self, action: #selector(reloadData), for: .touchUpInside)
+        headerView.addSubview(reloadButton)
         
         let usernameButton = UIButton()
         usernameButton.frame = CGRect(x: 0, y: 0, width: 70, height: 44)
@@ -84,6 +90,48 @@ class ListingsViewController: UITableViewController {
         
     }
     
+//    Get listings data from firebase to display on tableview
+    func getFirebaseData() {
+        ref = Database.database().reference()
+        
+        // Using this to handle async firebase call
+        let group = DispatchGroup()
+        group.enter()
+        
+//                ----------------- READ LISTINGS -----------------
+        ref.child("listings").observeSingleEvent(of: .value, with: { (snapshot) in
+            // Get user value
+            let value = snapshot.value as? NSDictionary
+            self.listingIDs = value!.allKeys as! [String]
+            for key in self.listingIDs {
+                let order = value![key] as! [String: AnyObject]
+                
+                if(order["active"] as! Bool == true){
+                    let expire: String = String(order["expire"] as! Int)
+                    let tmpListing = listing(userName: order["eatername"] as! String, pickUp: order["location"] as! String, dropOff: "dogwood", expireTime: expire)
+                    self.listOfListings.append(tmpListing)
+                } else {
+                    self.listingIDs = self.listingIDs.filter { $0 != key }
+                }
+            }
+            group.leave()
+            
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+        
+        // Once firebase returns data, reload tableview with listings
+        group.notify(queue: DispatchQueue.main, execute: {
+            self.tableView.reloadData()
+        })
+    }
+    
+    @objc func reloadData() {
+        print("reload")
+        listOfListings.removeAll()
+        getFirebaseData()
+    }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -104,6 +152,9 @@ class ListingsViewController: UITableViewController {
         print("row: " + String(indexPath.row))
         selected = listOfListings[indexPath.row].userName + "  |   " + self.listOfListings[indexPath.row].pickUp +  "  |   " + self.listOfListings[indexPath.row].dropOff + "  |   " + self.listOfListings[indexPath.row].expireTime
         
+        // Very bad way of doing this - should find permanent solution
+        selectedID = listingIDs[indexPath.row]
+        
         self.performSegue(withIdentifier: "pickUpScreen", sender: self)
     }
     
@@ -112,6 +163,7 @@ class ListingsViewController: UITableViewController {
             print("sel: " + selected)
             let newVC = segue.destination as! PickUpView
             newVC.selected = selected
+            newVC.listingID = selectedID
         }
     }
     
