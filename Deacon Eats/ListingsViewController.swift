@@ -90,6 +90,12 @@ class ListingsViewController: UITableViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.isNavigationBarHidden = true
+        self.tabBarController?.tabBar.isHidden = false
+    }
+    
 //    Get listings data from firebase to display on tableview
     func getFirebaseData() {
         ref = Database.database().reference()

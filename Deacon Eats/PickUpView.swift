@@ -22,6 +22,9 @@ class PickUpView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.isNavigationBarHidden = false
+        self.tabBarController?.tabBar.isHidden = true
+        
         print("id: " + listingID)
         
         pickUpButton = UIButton(frame: CGRect(x:100, y: 500, width: 100, height: 50))
@@ -38,13 +41,15 @@ class PickUpView: UIViewController {
         label.textAlignment = NSTextAlignment.left
         label.text = selected
         self.view.addSubview(label)
-        
-       
-        
-        
-        
-       
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.isNavigationBarHidden = false
+        self.tabBarController?.tabBar.isHidden = true
+    }
+    
+    
     
     @IBAction func displayInfo (sender: UIButton!) {
         print("button clicked")
