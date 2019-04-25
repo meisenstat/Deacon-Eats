@@ -34,10 +34,9 @@ class PlaceOrderViewController: UIViewController, UIPickerViewDelegate, UIPicker
     
     var restaurant = ""
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: .UIResponder.keyboardWillShowNotification, object: nil)
+        
         setUpObserver()
         setupGeneral()
         setupDestinations()
@@ -45,9 +44,9 @@ class PlaceOrderViewController: UIViewController, UIPickerViewDelegate, UIPicker
         setupOther()
         dismissPicker()
         dismissText()
+        
         view.addSubview(pickerView)
         view.addSubview(otherView)
-        print("rest: ", restaurant)
     }
     
     private func setUpObserver() {
@@ -58,15 +57,11 @@ class PlaceOrderViewController: UIViewController, UIPickerViewDelegate, UIPicker
     @objc fileprivate func keyboardWillShow(notification:NSNotification) {
         if let keyboardRectValue = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
             let keyboardHeight = keyboardRectValue.minY
-            print("height: ", keyboardHeight)
-            print("diff", keyboardHeight - otherButton.frame.maxY)
             
-//            otherView = UIView(frame: CGRect(x: 0, y: otherButton.frame.maxY + 20, width: view.frame.width, height: keyboardHeight - otherButton.frame.maxY - 44))
             print("frame before: ", otherView.frame)
             otherView.frame = CGRect(x: 0, y: otherButton.frame.maxY + 20, width: view.frame.width, height: keyboardHeight - otherButton.frame.maxY - 44)
             print("frame after: ", otherView.frame)
             otherTextView.frame = CGRect(x: 0, y: 44, width: self.view.frame.size.width, height: otherView.frame.size.height-44)
-//            dismissText()
         }
     }
 
@@ -92,13 +87,6 @@ class PlaceOrderViewController: UIViewController, UIPickerViewDelegate, UIPicker
         
         
         // set up other parent view
-        
-//        var keyboardSize = notification.userInfo(valueForKey(UIKeyboardFrameBeginUserInfoKey))
-//        print(keyboardSize)
-        
-//        otherView = UIView(frame: CGRect(x: 0, y: view.frame.height - 330, width: view.frame.width, height: 330))
-        print(otherButton.frame.maxY)
-//        otherView = UIView(frame: CGRect(x: 0, y: otherButton.frame.maxY + 20, width: view.frame.width, height: 300))
         otherView = UIView(frame: CGRect(x: 0, y: otherButton.frame.maxY + 20, width: view.frame.width, height: 300))
         otherView.isHidden = true
         
@@ -131,7 +119,7 @@ class PlaceOrderViewController: UIViewController, UIPickerViewDelegate, UIPicker
         timePicker.center = CGPoint(x: view.frame.size.width  / 2, y: view.frame.size.height / 2)
         timePicker.frame = CGRect(x:0, y:0, width: self.view.frame.size.width, height:pickerView.frame.size.height)
         timePicker.backgroundColor = UIColor.lightGray
-        
+        setupHeaderForTimePicker()
         pickerView.addSubview(timePicker)
         
         timeLimitButton.addTarget(self, action: #selector(PlaceOrderViewController.timeClicked), for: UIControl.Event.touchUpInside)
@@ -152,6 +140,20 @@ class PlaceOrderViewController: UIViewController, UIPickerViewDelegate, UIPicker
         otherView.addSubview(otherTextView)
         
         otherButton.addTarget(self, action: #selector(PlaceOrderViewController.otherClicked), for: UIControl.Event.touchUpInside)
+    }
+    
+    func setupHeaderForTimePicker() {
+        let timeHeaders = ["Hours", "Minutes"]
+        let labelWidth = timePicker.frame.width / CGFloat(timePicker.numberOfComponents)
+        
+        for index in 0..<timeHeaders.count {
+            let label: UILabel = UILabel(frame: CGRect(x: timePicker.frame.origin.x + (labelWidth * CGFloat(index)), y: 44, width: labelWidth, height: 35))
+            label.text = timeHeaders[index]
+            label.textAlignment = .center
+            label.backgroundColor = UIColor.lightGray
+            print(label.text)
+            self.timePicker.addSubview(label)
+        }
     }
     
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
@@ -196,8 +198,6 @@ class PlaceOrderViewController: UIViewController, UIPickerViewDelegate, UIPicker
         
         // FORMAT EXPIRE TIME
         expireTime = (selectedTime[0] * 60) + selectedTime[1]
-        
-        //
         
         var orderDetails: NSDictionary = ["active": true, "created": createdTimeFormatted, "eatername": profileName, "expire": expireTime, "location": restaurant, "destination": selectedDestination, "runnername": "N/A", "instructions": otherInstructions]
         

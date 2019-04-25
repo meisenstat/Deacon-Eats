@@ -16,9 +16,7 @@
 		30B378F9221B731600D1AC2C /* Deacon_EatsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B378F8221B731600D1AC2C /* Deacon_EatsUITests.swift */; };
 		30E29D8A222744DC003EA657 /* NewOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E29D89222744DC003EA657 /* NewOrderViewController.swift */; };
 		30E29D8C22274644003EA657 /* GeneralTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E29D8B22274644003EA657 /* GeneralTabBarViewController.swift */; };
-		7163DEB5223F08DD00845360 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7163DEB4223F08DD00845360 /* CustomCell.swift */; };
 		71796B7F222747800001F971 /* ListingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71796B7E222747800001F971 /* ListingsViewController.swift */; };
-		91336F952227495C0080D0C8 /* Remove_ListingTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91336F942227495C0080D0C8 /* Remove_ListingTableView.swift */; };
 		915A4E672252A63800D7EF52 /* PickUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915A4E662252A63800D7EF52 /* PickUpView.swift */; };
 		C745014D5EBDA4F19FF0A88E /* Pods_Deacon_Eats.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9A321F4D5A8190BDC4E214D /* Pods_Deacon_Eats.framework */; };
 		CF1F15D07604831142535B39 /* Pods_Deacon_EatsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D7074D9ED3880AF1EC5C9E4 /* Pods_Deacon_EatsUITests.framework */; };
@@ -65,9 +63,7 @@
 		36DFCAA90EFF8106C1406BB3 /* Pods-Deacon EatsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Deacon EatsTests.release.xcconfig"; path = "Target Support Files/Pods-Deacon EatsTests/Pods-Deacon EatsTests.release.xcconfig"; sourceTree = "<group>"; };
 		52FA7A42269371B5C3669E6A /* Pods-Deacon Eats.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Deacon Eats.debug.xcconfig"; path = "Target Support Files/Pods-Deacon Eats/Pods-Deacon Eats.debug.xcconfig"; sourceTree = "<group>"; };
 		5D7074D9ED3880AF1EC5C9E4 /* Pods_Deacon_EatsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Deacon_EatsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7163DEB4223F08DD00845360 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		71796B7E222747800001F971 /* ListingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingsViewController.swift; sourceTree = "<group>"; };
-		91336F942227495C0080D0C8 /* Remove_ListingTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Remove_ListingTableView.swift; sourceTree = "<group>"; };
 		915A4E662252A63800D7EF52 /* PickUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickUpView.swift; sourceTree = "<group>"; };
 		963FFF343030679744CFCEB5 /* Pods-Deacon EatsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Deacon EatsUITests.release.xcconfig"; path = "Target Support Files/Pods-Deacon EatsUITests/Pods-Deacon EatsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B54E671A08ADD17C01572077 /* Pods-Deacon EatsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Deacon EatsTests.debug.xcconfig"; path = "Target Support Files/Pods-Deacon EatsTests/Pods-Deacon EatsTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -144,22 +140,20 @@
 		30B378D7221B731500D1AC2C /* Deacon Eats */ = {
 			isa = PBXGroup;
 			children = (
-				915A4E662252A63800D7EF52 /* PickUpView.swift */,
 				30B378D8221B731500D1AC2C /* AppDelegate.swift */,
-				30B378DA221B731500D1AC2C /* ViewController.swift */,
-				30B378DC221B731500D1AC2C /* Main.storyboard */,
-				91336F942227495C0080D0C8 /* Remove_ListingTableView.swift */,
-				71796B7E222747800001F971 /* ListingsViewController.swift */,
-				7163DEB4223F08DD00845360 /* CustomCell.swift */,
-				E8FFB028224C151100B948EE /* ProfileSubViewController.swift */,
-				E8256E46224C13020009E07A /* ProfileViewController.swift */,
-				E86E6AD3222C7D4B00D00CC8 /* PlaceOrderViewController.swift */,
 				30E29D89222744DC003EA657 /* NewOrderViewController.swift */,
+				E86E6AD3222C7D4B00D00CC8 /* PlaceOrderViewController.swift */,
+				71796B7E222747800001F971 /* ListingsViewController.swift */,
+				915A4E662252A63800D7EF52 /* PickUpView.swift */,
+				E8256E46224C13020009E07A /* ProfileViewController.swift */,
+				E8FFB028224C151100B948EE /* ProfileSubViewController.swift */,
 				30E29D8B22274644003EA657 /* GeneralTabBarViewController.swift */,
-				30B378DF221B731600D1AC2C /* Assets.xcassets */,
+				30B378DC221B731500D1AC2C /* Main.storyboard */,
 				30B378E1221B731600D1AC2C /* LaunchScreen.storyboard */,
 				30B378E4221B731600D1AC2C /* Info.plist */,
 				E8C37AD7226FE05800805B7F /* GoogleService-Info.plist */,
+				30B378DF221B731600D1AC2C /* Assets.xcassets */,
+				30B378DA221B731500D1AC2C /* ViewController.swift */,
 			);
 			path = "Deacon Eats";
 			sourceTree = "<group>";
@@ -431,7 +425,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91336F952227495C0080D0C8 /* Remove_ListingTableView.swift in Sources */,
 				915A4E672252A63800D7EF52 /* PickUpView.swift in Sources */,
 				E8256E47224C13020009E07A /* ProfileViewController.swift in Sources */,
 				E86E6AD4222C7D4B00D00CC8 /* PlaceOrderViewController.swift in Sources */,
@@ -439,7 +432,6 @@
 				30B378DB221B731500D1AC2C /* ViewController.swift in Sources */,
 				E8FFB029224C151100B948EE /* ProfileSubViewController.swift in Sources */,
 				30B378D9221B731500D1AC2C /* AppDelegate.swift in Sources */,
-				7163DEB5223F08DD00845360 /* CustomCell.swift in Sources */,
 				71796B7F222747800001F971 /* ListingsViewController.swift in Sources */,
 				30E29D8C22274644003EA657 /* GeneralTabBarViewController.swift in Sources */,
 			);

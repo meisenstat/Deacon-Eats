@@ -11,16 +11,19 @@ import UIKit
 
 class ProfileSubViewController: UIViewController {
     
+    var pageName = ""
+    
     override func viewDidLoad() {
+        super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = false
         self.tabBarController?.tabBar.isHidden = true
-        super.viewDidLoad()
+        self.navigationController?.navigationBar.topItem?.title = pageName
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         self.navigationController?.isNavigationBarHidden = false
         self.tabBarController?.tabBar.isHidden = true
-        super.viewWillAppear(animated)
     }
     
 }
