@@ -1,0 +1,6 @@
+framework module Pods_Deacon_EatsUITests {
+  umbrella header "Pods-Deacon EatsUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -8,14 +8,47 @@
 
 import Foundation
 import UIKit
+import FirebaseDatabase
 
 class NewOrderViewController: UITableViewController {
     
     var locations = ["Chic-fil-a", "Subway", "Zicks", "Einsteins", "Legal Grounds", "Campus Grounds", "Shorty's", "Starbucks ZSR", "Starbucks North Campus", "Forest Greens", "Moes", "Asian Fusion"]
     var selected = ""
     
+    var ref: DatabaseReference!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        ref = Database.database().reference()
+        
+//        ----------------- READ LISTINGS -----------------
+//        ref.child("listings").observeSingleEvent(of: .value, with: { (snapshot) in
+//            // Get user value
+//            let value = snapshot.value as? NSDictionary
+//            print(snapshot)
+//            print(value)
+//            print(value?.allKeys)
+//
+//            // ...
+//        }) { (error) in
+//            print(error.localizedDescription)
+//        }
+        
+        
+        
+//        ----------------- WRITE LISTING -----------------
+//        var newOrder: NSDictionary = ["active": true, "created": 201904081909, "eatername": "someone", "expire": 65, "location": "Panera", "runnername": "someone else"]
+//        ref.child("listings").child("LST0005").setValue(newOrder)
+        
+
+//        ----------------- SET LISTING TO PICKED UP -----------------
+//        var orderID = "LST0003"                 // This is the id that were going to update. Passed from prev view controller
+//        var tmpOrder: Dictionary = ["active": true, "created": 201904081909, "eatername": "someone", "expire": 65, "location": "Panera", "runnername": "someone else"] as [String : Any]        //This is the dict passed through db that we will update
+//        tmpOrder["active"] = false
+//        let newOrder = tmpOrder as NSDictionary
+//        ref.child("listings").child(orderID).setValue(newOrder)
+        
+        
         
         locations.sort()
         addTitle()
