@@ -16,15 +16,15 @@
 		30B378F9221B731600D1AC2C /* Deacon_EatsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B378F8221B731600D1AC2C /* Deacon_EatsUITests.swift */; };
 		30E29D8A222744DC003EA657 /* NewOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E29D89222744DC003EA657 /* NewOrderViewController.swift */; };
 		30E29D8C22274644003EA657 /* GeneralTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E29D8B22274644003EA657 /* GeneralTabBarViewController.swift */; };
+		4943617A455E2986D8905494 /* Pods_Deacon_Eats.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CF6A495C11B5EDE7EE61D31 /* Pods_Deacon_Eats.framework */; };
+		570B074D5EFCB26C0CA9FEBA /* Pods_Deacon_EatsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38D8CE86A3402F28534F6B21 /* Pods_Deacon_EatsUITests.framework */; };
 		71796B7F222747800001F971 /* ListingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71796B7E222747800001F971 /* ListingsViewController.swift */; };
 		915A4E672252A63800D7EF52 /* PickUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915A4E662252A63800D7EF52 /* PickUpView.swift */; };
-		C745014D5EBDA4F19FF0A88E /* Pods_Deacon_Eats.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9A321F4D5A8190BDC4E214D /* Pods_Deacon_Eats.framework */; };
-		CF1F15D07604831142535B39 /* Pods_Deacon_EatsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D7074D9ED3880AF1EC5C9E4 /* Pods_Deacon_EatsUITests.framework */; };
+		DFCFCF5AB271BFA427633BC6 /* Pods_Deacon_EatsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EDD7960B14AE7E5BA415E8E /* Pods_Deacon_EatsTests.framework */; };
+		E80A755A227221EF00904F49 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E80A7559227221EF00904F49 /* GoogleService-Info.plist */; };
 		E8256E47224C13020009E07A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8256E46224C13020009E07A /* ProfileViewController.swift */; };
 		E86E6AD4222C7D4B00D00CC8 /* PlaceOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86E6AD3222C7D4B00D00CC8 /* PlaceOrderViewController.swift */; };
-		E8C37AD8226FE05800805B7F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E8C37AD7226FE05800805B7F /* GoogleService-Info.plist */; };
 		E8FFB029224C151100B948EE /* ProfileSubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FFB028224C151100B948EE /* ProfileSubViewController.swift */; };
-		EFBBAB61F58A835E9B45B4C0 /* Pods_Deacon_EatsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1A85C5BBE09E3624E7DEE1F /* Pods_Deacon_EatsTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		12DAADD42D0030695B85CEC5 /* Pods-Deacon EatsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Deacon EatsTests.debug.xcconfig"; path = "Target Support Files/Pods-Deacon EatsTests/Pods-Deacon EatsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		1964749F24BFF61A78BD1191 /* Pods-Deacon Eats.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Deacon Eats.debug.xcconfig"; path = "Target Support Files/Pods-Deacon Eats/Pods-Deacon Eats.debug.xcconfig"; sourceTree = "<group>"; };
 		30B378D5221B731500D1AC2C /* Deacon Eats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Deacon Eats.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		30B378D8221B731500D1AC2C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30B378DA221B731500D1AC2C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,21 +62,19 @@
 		30B378FA221B731600D1AC2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		30E29D89222744DC003EA657 /* NewOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewOrderViewController.swift; sourceTree = "<group>"; };
 		30E29D8B22274644003EA657 /* GeneralTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralTabBarViewController.swift; sourceTree = "<group>"; };
-		36DFCAA90EFF8106C1406BB3 /* Pods-Deacon EatsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Deacon EatsTests.release.xcconfig"; path = "Target Support Files/Pods-Deacon EatsTests/Pods-Deacon EatsTests.release.xcconfig"; sourceTree = "<group>"; };
-		52FA7A42269371B5C3669E6A /* Pods-Deacon Eats.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Deacon Eats.debug.xcconfig"; path = "Target Support Files/Pods-Deacon Eats/Pods-Deacon Eats.debug.xcconfig"; sourceTree = "<group>"; };
-		5D7074D9ED3880AF1EC5C9E4 /* Pods_Deacon_EatsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Deacon_EatsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		38D8CE86A3402F28534F6B21 /* Pods_Deacon_EatsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Deacon_EatsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3EDD7960B14AE7E5BA415E8E /* Pods_Deacon_EatsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Deacon_EatsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C631D3EE7C81512683C3F4B /* Pods-Deacon Eats.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Deacon Eats.release.xcconfig"; path = "Target Support Files/Pods-Deacon Eats/Pods-Deacon Eats.release.xcconfig"; sourceTree = "<group>"; };
+		4D1B7456FA6BA445816B0A42 /* Pods-Deacon EatsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Deacon EatsUITests.release.xcconfig"; path = "Target Support Files/Pods-Deacon EatsUITests/Pods-Deacon EatsUITests.release.xcconfig"; sourceTree = "<group>"; };
+		5CF6A495C11B5EDE7EE61D31 /* Pods_Deacon_Eats.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Deacon_Eats.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		71796B7E222747800001F971 /* ListingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingsViewController.swift; sourceTree = "<group>"; };
 		915A4E662252A63800D7EF52 /* PickUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickUpView.swift; sourceTree = "<group>"; };
-		963FFF343030679744CFCEB5 /* Pods-Deacon EatsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Deacon EatsUITests.release.xcconfig"; path = "Target Support Files/Pods-Deacon EatsUITests/Pods-Deacon EatsUITests.release.xcconfig"; sourceTree = "<group>"; };
-		B54E671A08ADD17C01572077 /* Pods-Deacon EatsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Deacon EatsTests.debug.xcconfig"; path = "Target Support Files/Pods-Deacon EatsTests/Pods-Deacon EatsTests.debug.xcconfig"; sourceTree = "<group>"; };
-		CF0D018400914D6285B51A56 /* Pods-Deacon Eats.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Deacon Eats.release.xcconfig"; path = "Target Support Files/Pods-Deacon Eats/Pods-Deacon Eats.release.xcconfig"; sourceTree = "<group>"; };
-		E1A85C5BBE09E3624E7DEE1F /* Pods_Deacon_EatsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Deacon_EatsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6B11D5F0DDD2C70FE6F3FCA /* Pods-Deacon EatsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Deacon EatsTests.release.xcconfig"; path = "Target Support Files/Pods-Deacon EatsTests/Pods-Deacon EatsTests.release.xcconfig"; sourceTree = "<group>"; };
+		C6BE7259A602C61D58AC92B0 /* Pods-Deacon EatsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Deacon EatsUITests.debug.xcconfig"; path = "Target Support Files/Pods-Deacon EatsUITests/Pods-Deacon EatsUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E80A7559227221EF00904F49 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E8256E46224C13020009E07A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		E86E6AD3222C7D4B00D00CC8 /* PlaceOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceOrderViewController.swift; sourceTree = "<group>"; };
-		E8C37AD7226FE05800805B7F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E8FFB028224C151100B948EE /* ProfileSubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSubViewController.swift; sourceTree = "<group>"; };
-		E9A321F4D5A8190BDC4E214D /* Pods_Deacon_Eats.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Deacon_Eats.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F41EC1A91E820C4289B3667E /* Pods-Deacon EatsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Deacon EatsUITests.debug.xcconfig"; path = "Target Support Files/Pods-Deacon EatsUITests/Pods-Deacon EatsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C745014D5EBDA4F19FF0A88E /* Pods_Deacon_Eats.framework in Frameworks */,
+				4943617A455E2986D8905494 /* Pods_Deacon_Eats.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,7 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EFBBAB61F58A835E9B45B4C0 /* Pods_Deacon_EatsTests.framework in Frameworks */,
+				DFCFCF5AB271BFA427633BC6 /* Pods_Deacon_EatsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,19 +98,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF1F15D07604831142535B39 /* Pods_Deacon_EatsUITests.framework in Frameworks */,
+				570B074D5EFCB26C0CA9FEBA /* Pods_Deacon_EatsUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0720C1535DA4E1C0E80B0D19 /* Frameworks */ = {
+		05FC193AA64285E2784CFDFB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E9A321F4D5A8190BDC4E214D /* Pods_Deacon_Eats.framework */,
-				E1A85C5BBE09E3624E7DEE1F /* Pods_Deacon_EatsTests.framework */,
-				5D7074D9ED3880AF1EC5C9E4 /* Pods_Deacon_EatsUITests.framework */,
+				5CF6A495C11B5EDE7EE61D31 /* Pods_Deacon_Eats.framework */,
+				3EDD7960B14AE7E5BA415E8E /* Pods_Deacon_EatsTests.framework */,
+				38D8CE86A3402F28534F6B21 /* Pods_Deacon_EatsUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -123,7 +123,7 @@
 				30B378F7221B731600D1AC2C /* Deacon EatsUITests */,
 				30B378D6221B731500D1AC2C /* Products */,
 				50A943C987C46CCBB1F1378B /* Pods */,
-				0720C1535DA4E1C0E80B0D19 /* Frameworks */,
+				05FC193AA64285E2784CFDFB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -151,7 +151,7 @@
 				30B378DC221B731500D1AC2C /* Main.storyboard */,
 				30B378E1221B731600D1AC2C /* LaunchScreen.storyboard */,
 				30B378E4221B731600D1AC2C /* Info.plist */,
-				E8C37AD7226FE05800805B7F /* GoogleService-Info.plist */,
+				E80A7559227221EF00904F49 /* GoogleService-Info.plist */,
 				30B378DF221B731600D1AC2C /* Assets.xcassets */,
 				30B378DA221B731500D1AC2C /* ViewController.swift */,
 			);
@@ -179,12 +179,12 @@
 		50A943C987C46CCBB1F1378B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				52FA7A42269371B5C3669E6A /* Pods-Deacon Eats.debug.xcconfig */,
-				CF0D018400914D6285B51A56 /* Pods-Deacon Eats.release.xcconfig */,
-				B54E671A08ADD17C01572077 /* Pods-Deacon EatsTests.debug.xcconfig */,
-				36DFCAA90EFF8106C1406BB3 /* Pods-Deacon EatsTests.release.xcconfig */,
-				F41EC1A91E820C4289B3667E /* Pods-Deacon EatsUITests.debug.xcconfig */,
-				963FFF343030679744CFCEB5 /* Pods-Deacon EatsUITests.release.xcconfig */,
+				1964749F24BFF61A78BD1191 /* Pods-Deacon Eats.debug.xcconfig */,
+				4C631D3EE7C81512683C3F4B /* Pods-Deacon Eats.release.xcconfig */,
+				12DAADD42D0030695B85CEC5 /* Pods-Deacon EatsTests.debug.xcconfig */,
+				B6B11D5F0DDD2C70FE6F3FCA /* Pods-Deacon EatsTests.release.xcconfig */,
+				C6BE7259A602C61D58AC92B0 /* Pods-Deacon EatsUITests.debug.xcconfig */,
+				4D1B7456FA6BA445816B0A42 /* Pods-Deacon EatsUITests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -196,11 +196,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 30B378FD221B731600D1AC2C /* Build configuration list for PBXNativeTarget "Deacon Eats" */;
 			buildPhases = (
-				B487433421353C9AA9FB6BA3 /* [CP] Check Pods Manifest.lock */,
+				CE8BF7290701C9D17B4F73E8 /* [CP] Check Pods Manifest.lock */,
 				30B378D1221B731500D1AC2C /* Sources */,
 				30B378D2221B731500D1AC2C /* Frameworks */,
 				30B378D3221B731500D1AC2C /* Resources */,
-				E1B64D932A2987FB76B1E80C /* [CP] Embed Pods Frameworks */,
+				37F10754475BAD752A2E90F1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -215,7 +215,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 30B37900221B731600D1AC2C /* Build configuration list for PBXNativeTarget "Deacon EatsTests" */;
 			buildPhases = (
-				C6E3104085320C29C77E2D5C /* [CP] Check Pods Manifest.lock */,
+				9E8805B443F2EEAAA1344380 /* [CP] Check Pods Manifest.lock */,
 				30B378E5221B731600D1AC2C /* Sources */,
 				30B378E6221B731600D1AC2C /* Frameworks */,
 				30B378E7221B731600D1AC2C /* Resources */,
@@ -234,7 +234,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 30B37903221B731600D1AC2C /* Build configuration list for PBXNativeTarget "Deacon EatsUITests" */;
 			buildPhases = (
-				8E05ECBD0BC0C887A29CACAA /* [CP] Check Pods Manifest.lock */,
+				7DFB35A7DB2A568EE2B2F339 /* [CP] Check Pods Manifest.lock */,
 				30B378F0221B731600D1AC2C /* Sources */,
 				30B378F1221B731600D1AC2C /* Frameworks */,
 				30B378F2221B731600D1AC2C /* Resources */,
@@ -303,7 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				30B378E3221B731600D1AC2C /* LaunchScreen.storyboard in Resources */,
-				E8C37AD8226FE05800805B7F /* GoogleService-Info.plist in Resources */,
+				E80A755A227221EF00904F49 /* GoogleService-Info.plist in Resources */,
 				30B378E0221B731600D1AC2C /* Assets.xcassets in Resources */,
 				30B378DE221B731500D1AC2C /* Main.storyboard in Resources */,
 			);
@@ -326,73 +326,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		8E05ECBD0BC0C887A29CACAA /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Deacon EatsUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B487433421353C9AA9FB6BA3 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Deacon Eats-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C6E3104085320C29C77E2D5C /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Deacon EatsTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E1B64D932A2987FB76B1E80C /* [CP] Embed Pods Frameworks */ = {
+		37F10754475BAD752A2E90F1 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -416,6 +350,72 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Deacon Eats/Pods-Deacon Eats-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7DFB35A7DB2A568EE2B2F339 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Deacon EatsUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9E8805B443F2EEAAA1344380 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Deacon EatsTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE8BF7290701C9D17B4F73E8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Deacon Eats-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -606,7 +606,7 @@
 		};
 		30B378FE221B731600D1AC2C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 52FA7A42269371B5C3669E6A /* Pods-Deacon Eats.debug.xcconfig */;
+			baseConfigurationReference = 1964749F24BFF61A78BD1191 /* Pods-Deacon Eats.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -626,7 +626,7 @@
 		};
 		30B378FF221B731600D1AC2C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CF0D018400914D6285B51A56 /* Pods-Deacon Eats.release.xcconfig */;
+			baseConfigurationReference = 4C631D3EE7C81512683C3F4B /* Pods-Deacon Eats.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -646,7 +646,7 @@
 		};
 		30B37901221B731600D1AC2C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B54E671A08ADD17C01572077 /* Pods-Deacon EatsTests.debug.xcconfig */;
+			baseConfigurationReference = 12DAADD42D0030695B85CEC5 /* Pods-Deacon EatsTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -668,7 +668,7 @@
 		};
 		30B37902221B731600D1AC2C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 36DFCAA90EFF8106C1406BB3 /* Pods-Deacon EatsTests.release.xcconfig */;
+			baseConfigurationReference = B6B11D5F0DDD2C70FE6F3FCA /* Pods-Deacon EatsTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -690,7 +690,7 @@
 		};
 		30B37904221B731600D1AC2C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F41EC1A91E820C4289B3667E /* Pods-Deacon EatsUITests.debug.xcconfig */;
+			baseConfigurationReference = C6BE7259A602C61D58AC92B0 /* Pods-Deacon EatsUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -711,7 +711,7 @@
 		};
 		30B37905221B731600D1AC2C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 963FFF343030679744CFCEB5 /* Pods-Deacon EatsUITests.release.xcconfig */;
+			baseConfigurationReference = 4D1B7456FA6BA445816B0A42 /* Pods-Deacon EatsUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
