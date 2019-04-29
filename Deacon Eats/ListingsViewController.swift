@@ -75,8 +75,10 @@ class ListingsViewController: UITableViewController {
 //        img.tint
         reloadButton.setImage(img, for: .normal)
         reloadButton.tintColor = UIColor.blue
+        reloadButton.imageView?.contentMode = UIView.ContentMode.scaleAspectFit
         reloadButton.addTarget(self, action: #selector(reloadData), for: .touchUpInside)
         headerView.addSubview(reloadButton)
+        reloadButton.showsTouchWhenHighlighted = true
         
         let usernameButton = UIButton()
         usernameButton.frame = CGRect(x: 0, y: 0, width: 70, height: 44)
