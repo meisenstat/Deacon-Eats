@@ -16,6 +16,9 @@ class NewOrderViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        print(ProfilePickerView.user)
+        
         locations.sort()
         addTitle()
 //        addOptionsButton()

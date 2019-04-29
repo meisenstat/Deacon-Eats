@@ -183,7 +183,7 @@ class PlaceOrderViewController: UIViewController, UIPickerViewDelegate, UIPicker
     }
     
     @objc func submitOrder() {
-        let profileName = "Bob"
+        let profileName = ProfilePickerView.userID
         var createdTimeFormatted = 0
         var expireTime = 0
         
