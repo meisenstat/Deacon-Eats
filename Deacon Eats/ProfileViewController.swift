@@ -17,6 +17,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var privacyButton: UIButton!
     @IBOutlet weak var aboutButton: UIButton!
     @IBOutlet weak var helpButton: UIButton!
+    @IBOutlet weak var profileName: UITextField!
     
     var buttonSelected = ""
     
@@ -26,6 +27,8 @@ class ProfileViewController: UIViewController {
         self.tabBarController?.tabBar.isHidden = false
         
         buttonSetup()
+        
+        profileName.text = ProfilePickerView.user["firstname"]
     }
     
     override func viewWillAppear(_ animated: Bool) {
