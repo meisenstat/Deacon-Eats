@@ -23,6 +23,8 @@
 		DFCFCF5AB271BFA427633BC6 /* Pods_Deacon_EatsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EDD7960B14AE7E5BA415E8E /* Pods_Deacon_EatsTests.framework */; };
 		E80A755A227221EF00904F49 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E80A7559227221EF00904F49 /* GoogleService-Info.plist */; };
 		E8256E47224C13020009E07A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8256E46224C13020009E07A /* ProfileViewController.swift */; };
+		E82D128E2276A76E00FAB61B /* OrderInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82D128D2276A76E00FAB61B /* OrderInformationView.swift */; };
+		E82D12902276C21F00FAB61B /* ProfilePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82D128F2276C21F00FAB61B /* ProfilePickerView.swift */; };
 		E86E6AD4222C7D4B00D00CC8 /* PlaceOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86E6AD3222C7D4B00D00CC8 /* PlaceOrderViewController.swift */; };
 		E8FFB029224C151100B948EE /* ProfileSubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FFB028224C151100B948EE /* ProfileSubViewController.swift */; };
 /* End PBXBuildFile section */
@@ -73,6 +75,8 @@
 		C6BE7259A602C61D58AC92B0 /* Pods-Deacon EatsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Deacon EatsUITests.debug.xcconfig"; path = "Target Support Files/Pods-Deacon EatsUITests/Pods-Deacon EatsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E80A7559227221EF00904F49 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E8256E46224C13020009E07A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		E82D128D2276A76E00FAB61B /* OrderInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderInformationView.swift; sourceTree = "<group>"; };
+		E82D128F2276C21F00FAB61B /* ProfilePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePickerView.swift; sourceTree = "<group>"; };
 		E86E6AD3222C7D4B00D00CC8 /* PlaceOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceOrderViewController.swift; sourceTree = "<group>"; };
 		E8FFB028224C151100B948EE /* ProfileSubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSubViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -141,10 +145,12 @@
 			isa = PBXGroup;
 			children = (
 				30B378D8221B731500D1AC2C /* AppDelegate.swift */,
+				E82D128F2276C21F00FAB61B /* ProfilePickerView.swift */,
 				30E29D89222744DC003EA657 /* NewOrderViewController.swift */,
 				E86E6AD3222C7D4B00D00CC8 /* PlaceOrderViewController.swift */,
 				71796B7E222747800001F971 /* ListingsViewController.swift */,
 				915A4E662252A63800D7EF52 /* PickUpView.swift */,
+				E82D128D2276A76E00FAB61B /* OrderInformationView.swift */,
 				E8256E46224C13020009E07A /* ProfileViewController.swift */,
 				E8FFB028224C151100B948EE /* ProfileSubViewController.swift */,
 				30E29D8B22274644003EA657 /* GeneralTabBarViewController.swift */,
@@ -433,6 +439,8 @@
 				E8FFB029224C151100B948EE /* ProfileSubViewController.swift in Sources */,
 				30B378D9221B731500D1AC2C /* AppDelegate.swift in Sources */,
 				71796B7F222747800001F971 /* ListingsViewController.swift in Sources */,
+				E82D12902276C21F00FAB61B /* ProfilePickerView.swift in Sources */,
+				E82D128E2276A76E00FAB61B /* OrderInformationView.swift in Sources */,
 				30E29D8C22274644003EA657 /* GeneralTabBarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

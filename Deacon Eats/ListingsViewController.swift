@@ -23,19 +23,22 @@ class listing {
     var pickUp: String
     var dropOff: String
     var expireTime: String
+    var instructions: String
     
     init() {
         userName = ""
         pickUp = ""
         dropOff = ""
         expireTime = ""
+        instructions = ""
     }
     
-    init(userName: String, pickUp:String, dropOff: String, expireTime: String) {
+    init(userName: String, pickUp:String, dropOff: String, expireTime: String, instructions: String) {
         self.userName = userName
         self.pickUp = pickUp
         self.dropOff = dropOff
         self.expireTime = expireTime
+        self.instructions = instructions
     }
 }
 
@@ -45,8 +48,15 @@ class ListingsViewController: UITableViewController {
     var ref: DatabaseReference!
     var listOfListings : [listing] = []
     var listingIDs: [String] = []
+    
     var selected = ""
     var selectedID = ""
+    var destination = ""
+    var name = ""
+    var instructions = ""
+    var location = ""
+    var realName = ""
+    var phoneNumber = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,8 +75,10 @@ class ListingsViewController: UITableViewController {
 //        img.tint
         reloadButton.setImage(img, for: .normal)
         reloadButton.tintColor = UIColor.blue
+        reloadButton.imageView?.contentMode = UIView.ContentMode.scaleAspectFit
         reloadButton.addTarget(self, action: #selector(reloadData), for: .touchUpInside)
         headerView.addSubview(reloadButton)
+        reloadButton.showsTouchWhenHighlighted = true
         
         let usernameButton = UIButton()
         usernameButton.frame = CGRect(x: 0, y: 0, width: 70, height: 44)
@@ -114,7 +126,7 @@ class ListingsViewController: UITableViewController {
                 
                 if(order["active"] as! Bool == true){
                     let expire: String = String(order["expire"] as! Int)
-                    let tmpListing = listing(userName: order["eatername"] as! String, pickUp: order["location"] as! String, dropOff: "dogwood", expireTime: expire)
+                    let tmpListing = listing(userName: order["eatername"] as! String, pickUp: order["location"] as! String, dropOff: order["destination"] as! String, expireTime: expire, instructions: order["instructions"] as! String)
                     self.listOfListings.append(tmpListing)
                 } else {
                     self.listingIDs = self.listingIDs.filter { $0 != key }
@@ -160,8 +172,39 @@ class ListingsViewController: UITableViewController {
         
         // Very bad way of doing this - should find permanent solution
         selectedID = listingIDs[indexPath.row]
+        destination = listOfListings[indexPath.row].dropOff
+        name = listOfListings[indexPath.row].userName
+        instructions = listOfListings[indexPath.row].instructions
+        location = listOfListings[indexPath.row].pickUp
         
-        self.performSegue(withIdentifier: "pickUpScreen", sender: self)
+        ref = Database.database().reference()
+        // Using this to handle async firebase call
+        let group = DispatchGroup()
+        group.enter()
+        
+        //                ----------------- READ PROFILE INFO -----------------
+        ref.child("profiles").observeSingleEvent(of: .value, with: { (snapshot) in
+            // Get user value
+            let value = snapshot.value as? NSDictionary
+            var profileIDs = value!.allKeys as! [String]
+            for key in profileIDs {
+                let profile = value![key] as! [String: String]
+                
+                if(key == self.name) {
+                    self.realName = profile["firstname"]! + " " + profile["lastname"]!
+                    self.phoneNumber = profile["phone"]!
+                }
+            }
+            group.leave()
+            
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+        
+        // Once firebase returns data, reload tableview with listings
+        group.notify(queue: DispatchQueue.main, execute: {
+            self.performSegue(withIdentifier: "pickUpScreen", sender: self)
+        })
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -170,6 +213,15 @@ class ListingsViewController: UITableViewController {
             let newVC = segue.destination as! PickUpView
             newVC.selected = selected
             newVC.listingID = selectedID
+            
+            newVC.destination = destination
+            newVC.nameID = name
+            newVC.instructions = instructions
+            newVC.location = location
+            
+            newVC.name = realName
+            newVC.phonenumber = phoneNumber
+            
         }
     }
     

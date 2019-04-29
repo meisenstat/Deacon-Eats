@@ -17,15 +17,23 @@ class PickUpView: UIViewController {
     var selected = ""
     var listingID = ""
     
+    var destination = ""
+    var nameID = ""
+    var instructions = ""
+    var location = ""
+    var name = ""
+    var phonenumber = ""
+    
     var ref: DatabaseReference!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print(destination + " " + nameID + " " + instructions + " " + location + " " + name + " " + phonenumber)
+        
         self.navigationController?.isNavigationBarHidden = false
         self.tabBarController?.tabBar.isHidden = true
-        
-        print("id: " + listingID)
+        self.navigationController?.navigationBar.topItem?.title = "Confirm Pickup"
         
         pickUpButton = UIButton(frame: CGRect(x:100, y: 500, width: 100, height: 50))
         pickUpButton.center = self.view.center
@@ -61,10 +69,25 @@ class PickUpView: UIViewController {
             if let error = error {
                 print("Data could not be saved: \(error).")
             } else {
-                print("Data saved successfully!")
+                
+            }
+        }
+        
+        ref.child("listings").child(self.listingID).child("runnername").setValue(ProfilePickerView.userID) {
+            (error:Error?, ref:DatabaseReference) in
+            if let error = error {
+                print("Data could not be saved: \(error).")
+            } else {
+                
                 let storyBoad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                let nextViewController = storyBoad.instantiateViewController(withIdentifier: "ListingsPage") as! ListingsViewController
+                let nextViewController = storyBoad.instantiateViewController(withIdentifier: "orderInformation") as! OrderInformationView
+                nextViewController.information["Destination"] = self.destination
+                nextViewController.information["Name"] = self.name
+                nextViewController.information["Instructions"] = self.instructions
+                nextViewController.information["Location"] = self.location
+                nextViewController.information["Phone Number"] = self.phonenumber
                 self.navigationController?.pushViewController(nextViewController, animated: true)
+                
             }
         }
         
