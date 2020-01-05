@@ -29,8 +29,6 @@ class PickUpView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(destination + " " + nameID + " " + instructions + " " + location + " " + name + " " + phonenumber)
-        
         self.navigationController?.isNavigationBarHidden = false
         self.tabBarController?.tabBar.isHidden = true
         self.navigationController?.navigationBar.topItem?.title = "Confirm Pickup"
@@ -60,7 +58,6 @@ class PickUpView: UIViewController {
     
     
     @IBAction func displayInfo (sender: UIButton!) {
-        print("button clicked")
       // send info to database
        
         ref = Database.database().reference()

@@ -58,9 +58,7 @@ class PlaceOrderViewController: UIViewController, UIPickerViewDelegate, UIPicker
         if let keyboardRectValue = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
             let keyboardHeight = keyboardRectValue.minY
             
-            print("frame before: ", otherView.frame)
             otherView.frame = CGRect(x: 0, y: otherButton.frame.maxY + 20, width: view.frame.width, height: keyboardHeight - otherButton.frame.maxY - 44)
-            print("frame after: ", otherView.frame)
             otherTextView.frame = CGRect(x: 0, y: 44, width: self.view.frame.size.width, height: otherView.frame.size.height-44)
         }
     }
@@ -151,7 +149,6 @@ class PlaceOrderViewController: UIViewController, UIPickerViewDelegate, UIPicker
             label.text = timeHeaders[index]
             label.textAlignment = .center
             label.backgroundColor = UIColor.lightGray
-            print(label.text)
             self.timePicker.addSubview(label)
         }
     }
@@ -202,7 +199,7 @@ class PlaceOrderViewController: UIViewController, UIPickerViewDelegate, UIPicker
         var orderDetails: NSDictionary = ["active": true, "created": createdTimeFormatted, "eatername": profileName, "expire": expireTime, "location": restaurant, "destination": selectedDestination, "runnername": "N/A", "instructions": otherInstructions]
         
         
-//        ----------------- WRITE LISTING -----------------
+        // Write Listing
         ref = Database.database().reference()
         var listingID = "LST"
         
@@ -249,7 +246,6 @@ class PlaceOrderViewController: UIViewController, UIPickerViewDelegate, UIPicker
         pickerView.isHidden = true
         otherView.isHidden = false
         otherTextView.isHidden = false
-        print("Clicked")
     }
     
     @objc func destClicked(sender: UIButton) {

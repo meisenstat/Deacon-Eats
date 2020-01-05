@@ -10,13 +10,6 @@ import Foundation
 import UIKit
 import FirebaseDatabase
 
-//struct CellData{
-//    let userName : String?
-//    let pickUp : String?
-//    let dropOff: String?
-//    let expierTime: NSDate?
-//}
-
 class listing {
     
     var userName:String
@@ -72,7 +65,7 @@ class ListingsViewController: UITableViewController {
         let reloadButton = UIButton()
         reloadButton.frame = CGRect(x: 0, y: 0, width: 70, height: 44)
         let img = UIImage(named: "reloadImage")
-//        img.tint
+        
         reloadButton.setImage(img, for: .normal)
         reloadButton.tintColor = UIColor.blue
         reloadButton.imageView?.contentMode = UIView.ContentMode.scaleAspectFit
@@ -108,7 +101,7 @@ class ListingsViewController: UITableViewController {
         self.tabBarController?.tabBar.isHidden = false
     }
     
-//    Get listings data from firebase to display on tableview
+    // Get listings data from firebase to display on tableview
     func getFirebaseData() {
         ref = Database.database().reference()
         
@@ -116,7 +109,7 @@ class ListingsViewController: UITableViewController {
         let group = DispatchGroup()
         group.enter()
         
-//                ----------------- READ LISTINGS -----------------
+        // Read Listings
         ref.child("listings").observeSingleEvent(of: .value, with: { (snapshot) in
             // Get user value
             let value = snapshot.value as? NSDictionary
@@ -145,7 +138,6 @@ class ListingsViewController: UITableViewController {
     }
     
     @objc func reloadData() {
-        print("reload")
         listOfListings.removeAll()
         getFirebaseData()
     }
@@ -167,7 +159,6 @@ class ListingsViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("row: " + String(indexPath.row))
         selected = listOfListings[indexPath.row].userName + "  |   " + self.listOfListings[indexPath.row].pickUp +  "  |   " + self.listOfListings[indexPath.row].dropOff + "  |   " + self.listOfListings[indexPath.row].expireTime
         
         // Very bad way of doing this - should find permanent solution
@@ -182,7 +173,7 @@ class ListingsViewController: UITableViewController {
         let group = DispatchGroup()
         group.enter()
         
-        //                ----------------- READ PROFILE INFO -----------------
+        // Read Profile Info
         ref.child("profiles").observeSingleEvent(of: .value, with: { (snapshot) in
             // Get user value
             let value = snapshot.value as? NSDictionary
@@ -209,7 +200,6 @@ class ListingsViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "pickUpScreen") {
-            print("sel: " + selected)
             let newVC = segue.destination as! PickUpView
             newVC.selected = selected
             newVC.listingID = selectedID

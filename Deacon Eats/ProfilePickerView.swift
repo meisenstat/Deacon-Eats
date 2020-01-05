@@ -9,6 +9,13 @@
 import Foundation
 import UIKit
 
+/**
+ * This class is used to allow the user to switch betweeen
+ *  one of two profiles, user one or user two.
+ * The reason this is used is because we did not have enough
+ *  time to implement an authentication process.
+ */
+
 class ProfilePickerView: UIViewController {
     
     @IBOutlet weak var userOneButton: UIButton!

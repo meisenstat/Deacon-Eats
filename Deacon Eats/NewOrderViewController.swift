@@ -11,17 +11,17 @@ import UIKit
 
 class NewOrderViewController: UITableViewController {
     
-    var locations = ["Chic-fil-a", "Subway", "Zicks", "Einsteins", "Legal Grounds", "Campus Grounds", "Shorty's", "Starbucks ZSR", "Starbucks North Campus", "Forest Greens", "Moes", "Asian Fusion"]
+    var locations = ["Chic-fil-a", "Subway", "Zicks", "Einsteins",
+                     "Legal Grounds", "Campus Grounds", "Shorty's",
+                     "Starbucks ZSR", "Starbucks North Campus",
+                     "Forest Greens", "Moes", "Asian Fusion"]
     var selected = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        print(ProfilePickerView.user)
-        
         locations.sort()
         addTitle()
-//        addOptionsButton()
         
         self.tableView.rowHeight = 50
         self.tableView.tableFooterView = UIView()
@@ -57,14 +57,12 @@ class NewOrderViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("row: " + String(indexPath.row))
         selected = locations[indexPath.row]
         self.performSegue(withIdentifier: "moveToOrder", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "moveToOrder") {
-            print("sel: " + selected)
             let newVC = segue.destination as! PlaceOrderViewController
             newVC.hidesBottomBarWhenPushed = true
             newVC.restaurant = selected
